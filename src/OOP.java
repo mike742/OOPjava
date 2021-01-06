@@ -30,7 +30,7 @@ public class OOP {
 		
 		Enter a variable name (q to quit): streetAddress2
 		Good!*/
-		
+		/*
 		System.out.println( varNameChecker("2ndStreetAddress") );
 		System.out.println( varNameChecker("street address2") );
 		
@@ -38,12 +38,67 @@ public class OOP {
 		System.out.println( varNameChecker("street$address$2") );
 		
 		System.out.println( varNameChecker("streetAddress2") );
+		
+		int res2 = varNameChecker("streetAddress2"); // 3, 2, 1
+		
+		switch(res2) {
+		case 1: 
+			// Illegal
+			break;
+		case 2: 
+			// poor styled
+			break;
+		case 3: 
+			// Good
+			break;
+		}
+		*/
+		
+		// phone("1-816-7412000");
+		// phone("86-131-12345678");
+		
+		String pn = "1-816-7412000";
+		String[] parts = pn.split("-");
+		
+		System.out.println(parts[0]);
+		System.out.println(parts[1]);
+		System.out.println(parts[2]);
 	}
+	
+	
+	public static void phone(String input) {
+		String cc = "", ac = "", pn = "";
+		int dashCount = 0;
 		
+		for(int i = 0; i < input.length(); ++i) {
+			char c = input.charAt(i);
+			
+			if(c == '-') {
+				dashCount++;
+			}
+			else {
+				switch(dashCount) {
+				case 0: 
+					cc += c;
+					break;
+				case 1: 
+					ac += c;
+					break;
+				case 2: 
+					pn += c;
+					break;
+				}
+			}
+		}
+		
+		System.out.println("cc: " + cc);
+		System.out.println("ac: " + ac);
+		System.out.println("pn: " + pn);
+	}
+	
+	// public static void 
 	public static int varNameChecker(String input) {
-		
-		// 1 - illegal; 2 - legal; 3 - good
-		// -1; 0; 1
+
 		int res = 3;
 		
 		for(int i = 0; i < input.length() && res != 1; ++i) {
