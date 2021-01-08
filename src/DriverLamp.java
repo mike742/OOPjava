@@ -8,6 +8,10 @@ public class DriverLamp {
 		l1.turnOn();
 		l1.turnOff();
 		
+		Lamp l2 = new Lamp();
+		Lamp l3 = new Lamp();
+		Lamp l4 = new Lamp();
+		
 	}
 
 }

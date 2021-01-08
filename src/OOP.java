@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class OOP {
 
 	public static void main(String[] args) {
+		
+		//OOP 
+		
 		// TODO Auto-generated method stub
 		
 		/*
@@ -116,7 +119,7 @@ public class OOP {
 				break;
 			}
 
-			int res2= varNameChecker(vn); //3,2,1
+			int res2= OOP.varNameChecker(vn); //3,2,1
 
 			switch (res2) {
 				case 1:
