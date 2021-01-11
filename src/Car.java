@@ -1,14 +1,16 @@
 public class Car {
 
 	private String colour;
-	private float price;
+	private float price; 
+	private float cost;
 
 	public Car() {
 	}
 
-	public Car(float price, String colour) {
+	public Car(float cost, String colour) {
 		this.colour = colour;
-		this.price = price * 2;
+		this.cost = cost;
+		this.price = 2 * cost;
 	}
 
 	public void setColour(String value) {
@@ -23,8 +25,9 @@ public class Car {
 		return this.price;
 	}
 
-	public void setPrice(float price) {
-		this.price = price * 2;
+	public void setCost(float cost) {
+		this.cost = cost;
+		this.price = 2 * cost;
 	}
 
 	public void display() {

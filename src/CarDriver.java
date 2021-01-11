@@ -18,7 +18,7 @@ public class CarDriver {
 		String str1 = new String("string number 1");
 		String str2 = new String("string number 1");
 		
-		if( str1.equals(str2) ) {
+		if( str1.equals(str2) ) { // == !!!!!
 			System.out.println("str1 and str2 are the same");
 		}
 		else {
