@@ -51,6 +51,21 @@ public class Car {
 		return ( new Car(_cost, _colour) );
 	}
 	
+	public void swap(Car car) {
+		// car1.swap(car2);
+		// this => car1   car => car2
+		
+		Car temp = new Car(car._cost, car._colour);
+		
+		car._colour = this._colour;
+		car._cost = this._cost;
+		car._price = this._cost * 2;
+		
+		this._colour = temp._colour;
+		this._cost = temp._cost;
+		this._price = this._cost * 2;
+	}
+	
 	public void display() {
 		System.out.println("Price = " + _price + ", Colour = " + _colour);
 	}
