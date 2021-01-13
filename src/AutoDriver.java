@@ -7,7 +7,8 @@ public class AutoDriver {
 
 		Scanner sn = new Scanner(System.in);
 		
-		int carsAmount = 2;
+		System.out.println("Amount of cars: ");
+		int carsAmount =  Integer.parseInt( sn.nextLine() );
 		
 		for(int i = 0; i < carsAmount; ++i) {
 			
