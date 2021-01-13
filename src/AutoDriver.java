@@ -28,6 +28,18 @@ public class AutoDriver {
 				}
 			}
 			
+			while(true) {
+				System.out.println("Select blue, green, or red (b,g,r): ");
+				colorChar = sn.nextLine().charAt(0);
+				
+				if(colorChar == 'b' || colorChar == 'g' || colorChar == 'r') {
+					break;
+				}
+				else {
+					System.out.println("The only valid selections are 'b', 'g', or 'r': ");
+				}
+			}
+			
 		}
 		
 		
