@@ -16,11 +16,13 @@ public class Auto {
 		color = value;
 	}
 	
-	public void printMake() {
+	public Auto printMake() {
 		System.out.print(make);
+		return this;
 	}
 	
-	public void printColor() {
+	public Auto printColor() {
 		System.out.print(color);
+		return this;
 	}
 }

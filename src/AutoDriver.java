@@ -40,6 +40,36 @@ public class AutoDriver {
 				}
 			}
 			
+			switch(makeChar) {
+			case 'b':
+				makeStr = "Buick";
+				break;
+			case 'c':
+				makeStr = "Chevrolet";
+				break;
+			case 'p':
+				makeStr = "Pontiac";
+				break;
+			}
+			
+			switch(colorChar) {
+			case 'b':
+				colorStr = "Blue";
+				break;
+			case 'g':
+				colorStr = "Green";
+				break;
+			case 'r':
+				colorStr = "Red";
+				break;
+			}
+			
+			//System.out.println(colorStr + " " + makeStr);
+			
+			car.setMake(makeStr);
+			car.setColor(colorStr);
+			
+			car.printColor().printMake();
 		}
 		
 		
