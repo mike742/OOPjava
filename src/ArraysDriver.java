@@ -29,21 +29,36 @@ public class ArraysDriver {
 		System.out.println( Arrays.toString(arr2) ); // 1, 77, 3
 		
 		
+		int[] ga1 = getArray();
+		int[] ga2 = getArray();
+		
+		ga2[1] = 222;
 
-
+		System.out.println( Arrays.toString(ga1) ); 
+		System.out.println( Arrays.toString(ga2) );
 	}
 
+	public static int[] getArray() {
+		int[] output = new int[] {1,2,3,4,5,6,7};
+		
+		System.out.println( "Address of output : " + output );
+		
+		return output;
+	}
+	
 	public static int sum(int[] input) {
 		System.out.println( "Address input : " + input );
 		int res = 0;
-		int[] arr = new int[input.length];
+		int[] arr = input.clone();
+		
 		System.out.println( "Address copy : " + arr );
 		
 		// System.out.println( Arrays.toString(arr) );
-		
+		/*
 		for(int i = 0; i < arr.length; ++i) {
 			arr[i] = input[i];
 		}
+		*/
 		System.out.println( Arrays.toString(arr) );
 		
 		arr[0] = 22;
