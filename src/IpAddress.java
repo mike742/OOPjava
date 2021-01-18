@@ -40,6 +40,28 @@ public class IpAddress {
 			}
 		}	
 		
+		String[] resIp = value.split("[.]");
+		int octet;
+		
+		octet = Integer.parseInt(resIp[0]); // (0 - 255)
+		
+		//if(!(octet >= 0 && octet <= 255)) {
+		if( octet < 0 || octet > 255 ) {
+			return false;
+		}
+		
+		octet = Integer.parseInt(resIp[1]); // (0 - 255)
+		
+		//if(!(octet >= 0 && octet <= 255)) {
+		if( octet < 0 || octet > 255 ) {
+			return false;
+		}		
+		
+		// secondOctet = Integer.parseInt(resIp[1]);
+		// thirdOctet = Integer.parseInt(resIp[2]);
+		// fourthOctet = Integer.parseInt(resIp[3]);
+		
+		
 		return res;
 	}
 }
