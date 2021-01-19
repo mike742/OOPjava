@@ -28,6 +28,10 @@ public class ContactLIst1 {
 		
 		
 		sn.close();
+		
+		
+		// method(int): int => 123 321, 456 654, 123456789 98765431
+		// no String type!!!
 	}
 
 }
