@@ -4,9 +4,15 @@ public class PartyDriver {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Party p = new Party(3, "Mark");
-		p.addGuest("Lucy");
-		p.printParty();
+		 Party party = new Party(3, "David Beckham");
+
+		 party.addGuest("Roberto Baggio");
+		 party.addGuest("Zinedine Zidane");
+		 party.addGuest("Roberto Baggio");
+		 party.addGuest("Johan Cruyff");
+		 party.addGuest("Diego Maradona");
+
+		 party.printParty();
 		
 	}
 

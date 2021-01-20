@@ -71,7 +71,44 @@ public class ArraysDriver {
 		//Arrays.sort(findElementArr, Collections.reverseOrder());
 		Arrays.sort(findElementArr, Comparator.reverseOrder());
 		System.out.println( Arrays.toString(findElementArr) );
+		
+		
+		int[][] twoDimArr1 = new int[5][7];
+		
+		// twoDimArr1[0] => [1, 2, 3, 4, 5, 6, 7]
+		// twoDimArr1[1] => [11, 22, 33, 4, 5, 6, 7]
+		
+		// 1 2 3 4 5
+		// 2 3 4 5 6
+		// 3 4 5 6 7
+		
+		int[][][] mDarr = new int [10] [20] [30];
+		
+		twoDimArr1[0][0] = 11;
+		
+		int[][] twoDimArr2 = { {1, 2, 3}, {2, 3, 4}, {5, 3, 2}, {8, 7, 5} };
+		
+		System.out.println(twoDimArr2.length);
+		System.out.println(twoDimArr2[0].length);
+		
+		for(int i =0; i < twoDimArr2.length; ++i) {
+			for(int j = 0; j < twoDimArr2[i].length; ++j) {
+				System.out.print(twoDimArr2[i][j] + " ");
+			}
+			System.out.print("\n");
+		}
 
+		char[][] twoDimArrChar = { {'*'}, {'*', '*'}, {'*', '*', '*'}, {'*', '*', '*', '*'} };
+		
+		for(int i =0; i < twoDimArrChar.length; ++i) {
+			for(int j = 0; j < twoDimArrChar[i].length; ++j) {
+				System.out.print(twoDimArrChar[i][j]);
+			}
+			System.out.print("\n");
+		}
+		
+		
+		int[][] counts = new int[5][2];
 	}
 
 	private static int indexOf(int a, Integer[] arr) {

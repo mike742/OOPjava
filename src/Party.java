@@ -11,7 +11,10 @@ public class Party {
 	public void addGuest(String guest) {
 		
 		boolean isInList = false;
-		// if() {}
+		if( _guests[_guests.length - 1] != null ) {
+			System.out.println( guest +  " cannot come to the party. The guest list is full.");
+			return;
+		}
 		
 		for(String g : _guests) {
 			if( g != null && g.equals(guest) ) {
@@ -27,6 +30,7 @@ public class Party {
 			for(int i = 0; i < _guests.length; ++i) {
 				if(_guests[i] == null) {
 					_guests[i] = guest;
+					break;
 				}
 			}
 		}
