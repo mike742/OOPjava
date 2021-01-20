@@ -29,9 +29,22 @@ public class ContactLIst1 {
 		
 		sn.close();
 		
+		System.out.println(reverseInt(123456789));
 		
 		// method(int): int => 123 321, 456 654, 123456789 98765431
 		// no String type!!!
+	}
+	
+	public static int reverseInt(int value) {
+		int res = 0;
+		
+		while(value > 0) {
+			
+			res = 10 * res + value % 10;
+			value /= 10;
+		}
+		
+		return res;
 	}
 
 }
