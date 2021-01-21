@@ -109,8 +109,25 @@ public class ArraysDriver {
 		
 		
 		int[][] counts = new int[5][2];
+		System.out.println();
+		
+		
+		System.out.println("method = " + inverseInt(-123456));
+		
 	}
 
+	public static int inverseInt(int value) {
+		
+		int res = 0;
+		
+		while(value > 0) {
+			res = res * 10 + value % 10;
+			value = value / 10;
+ 		}
+		
+		return res;
+	}
+	
 	private static int indexOf(int a, Integer[] arr) {
 
 		for (int i = 0; i < arr.length; ++i) {
