@@ -2,7 +2,8 @@
 public class VolewCounter {
 	
 	private int[][] _counts = new int[vowels.length][2];
-	private static char[] vowels = { 'A', 'E', 'I', 'O', 'U', 'a' };
+	private static char[] vowels = { 'A', 'E', 'I', 'O', 'U' };
+	//private static char[] vowels2 = {'a', 'e', 'i', 'o', 'u' };
 	
 	public void processLine(String input) {
 		
@@ -12,11 +13,13 @@ public class VolewCounter {
 		
 			for(int c = 0; c < vowels.length; ++c) {
 				
-				if(inputArr[i] == vowels[c] ) {
+				if( inputArr[i] == Character.toLowerCase( vowels[c] ) ) {
+					_counts[c][0]++;
+				}
+				
+				if( inputArr[i] == vowels[c] ) {
 					_counts[c][1]++;
 				}
-				// lowerCase cond. should be!!!!
-				
 			}
 		}
 		
