@@ -1,17 +1,31 @@
+import java.util.Scanner;
 
 public class VolewCounterDriver {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		VolewCounter vc = new VolewCounter();
-		// Oscar the ostrich graduated
-		// from Exeter in England.
-		
-		vc.processLine("Oscar the ostrich graduated");
-		vc.processLine("from Exeter in England.");
+		Scanner scan = new Scanner(System.in);
+		String input = "123456";
+		boolean check = true;
+
+		do {
+
+			System.out.println("Enter a line of characters (press enter by itself to quit): ");
+
+			input = scan.nextLine();
+			
+			/*
+			if ( input.equals("") ) { // input == ""
+				break;
+			}
+			*/
+			vc.processLine(input);
+		}
+		while ( !input.equals("") );
 		
 		vc.printSummary();
-		
+
+		scan.close();
 	}
 
 }
